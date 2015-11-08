@@ -12,7 +12,7 @@ def main():
     ser = serial.Serial(SERIAL_PORT, SERIAL_RATE)
     while True:
         sensor_json = ser.readline()
-        picloud.publush(event=PICLOUD_EVENT, data=sensor_json)
+        picloud.publish(event=PICLOUD_EVENT, data=sensor_json)
 
 
 if __name__ == "__main__":
