@@ -8,7 +8,7 @@ PICLOUD_EVENT = 'home:thpl'
 
 
 def main():
-    picloud = PiCloud()
+    picloud = PiCloud(client_name='THPL-Data-Reporter')
     ser = serial.Serial(SERIAL_PORT, SERIAL_RATE)
     while True:
         sensor_json = ser.readline()
