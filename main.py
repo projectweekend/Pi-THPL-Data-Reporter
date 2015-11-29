@@ -1,7 +1,7 @@
 import os
 import logging
 import serial
-from picloud_client import PiCloud
+from picloud_client import PubClient
 
 
 SERIAL_PORT = '/dev/ttyAMA0'
@@ -23,7 +23,7 @@ logging.basicConfig(
 
 
 def main():
-    picloud = PiCloud(
+    picloud = PubClient(
         url=PICLOUD_PUB_URL,
         api_key=PICLOUD_API_KEY,
         client_name='THPL-Data-Reporter')
